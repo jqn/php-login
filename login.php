@@ -5,6 +5,15 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    echo $username, ' ', $password;
+  if (empty($username) === true || empty($password) === true) {
+    $errors[] = 'You need to enter a username and password';
+  } else if (user_exists($username) === false) {
+    $errors[] = 'We can\'t find that username. Please register!';
+  } else if (user_active($username) === false) {
+    $errors[] = 'Please activate your account!';
+  } else {
+    //
+  }
+    print_r($errors);
 }
 ?>
