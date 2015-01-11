@@ -12,7 +12,12 @@
   } else if (user_active($username) === false) {
     $errors[] = 'Please activate your account!';
   } else {
-    //
+    $login = login($username, $password);
+    if ($login === false) {
+      $errors[] = "Username/password is incorrect";
+    } else {
+      echo 'ok';
+    }
   }
     print_r($errors);
 }
