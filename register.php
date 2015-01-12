@@ -3,9 +3,4 @@
 <h1>Register</h1>
 <p>Registration page</p>
 
-<?php
-
-
-
-include 'includes/overall/footer.php';
-?>
+<?php include 'includes/overall/footer.php'; ?>
