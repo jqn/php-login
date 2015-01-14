@@ -17,7 +17,7 @@
         $errors[] = 'That username/password combination is incorrect.';
       } else {
         $_SESSION['user_id'] = $login;
-        header('Location: index.php');
+        header('Location: dashboard.php');
         exit();
       }
     }
